@@ -1,31 +1,45 @@
-# Australian Inflation Rate Time Series Forecasting
+# Australian Electricity Demand Forecasting Project
 
-This repository contains the data, code, and analysis for forecasting the Australian inflation rate using time series data. The project aims to build a predictive model to understand the trends and patterns in the Consumer Price Index (CPI) for Australia.
+## Overview
+This project focuses on analyzing and forecasting the half-hourly electricity consumption of Australian states from 2002 to 2015. Using time series forecasting techniques, we aim to predict energy consumption for subsequent years and compare the forecasts with actual data post-2015.
 
-## Project Overview
+## Dataset
+- **Source**: Godahewa, R. (2021). "Australian Electricity Demand Dataset". Zenodo. [DOI: 10.5281/zenodo.4659727](https://doi.org/10.5281/zenodo.4659727).
+- **Description**: The dataset includes half-hourly electricity demand data for various Australian states, spanning from 2002 to 2015.
 
-The inflation rate is a crucial economic indicator that reflects the rate at which the general level of prices for goods and services is rising, and subsequently, how it affects the purchasing power of currency. This project uses historical CPI data to forecast future inflation trends in Australia.
-
-## Data Source
-
-The primary dataset used in this project is the Consumer Price Index (CPI) provided by the Australian Bureau of Statistics (ABS). The data includes CPI index numbers and percentage changes across different capital cities and the entire country.
+## Objectives
+1. Analyze historical electricity demand patterns.
+2. Develop and validate time series forecasting models.
+3. Predict future electricity consumption for the years following 2015.
+4. Compare predictions with actual demand data post-2015 to evaluate forecasting accuracy.
 
 ## Methodology
+- Time series analysis and forecasting methods (e.g., ARIMA, LSTM).
+- Data pre-processing and exploratory analysis to understand demand patterns and influential factors.
+- Model training, tuning, and validation.
 
-The project employs various time series analysis techniques, such as ARIMA, SARIMA, and machine learning approaches, to model and predict inflation rates.
+## Tools and Technologies
+- Python for data analysis and machine learning.
+- Libraries: Pandas, NumPy, Matplotlib, scikit-learn, TensorFlow/Keras.
 
-## Usage
+## How to Use
+- Clone the repository.
+- Install required Python libraries.
+- Run the Jupyter notebooks for analysis and model training.
 
-The main analysis can be found in the Jupyter notebooks within this repository. These notebooks contain step-by-step instructions and code to perform the time series forecasting.
+## Contributing
+Contributions to the project are welcome. Please submit pull requests or open issues for discussion.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+- Thanks to R. Godahewa for providing the dataset.
+- Acknowledge any other contributors or data sources here.
 
 ## Contributing
 
 Contributions to this project are welcome. Please open an issue to discuss proposed changes or submit a pull request.
-
-## Acknowledgments
-
-- Australian Bureau of Statistics for providing the CPI data.
-- Contributors and reviewers of the project.
 
 ## Contact
 
