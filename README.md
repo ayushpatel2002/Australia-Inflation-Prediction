@@ -1,44 +1,39 @@
-<div align="center">
-  <h1>Time Series Analysis Summary</h1>
-  <p>Comprehensive analysis of half-hourly energy demand in Victoria, Australia.</p>
-</div>
+<details>
+<summary><strong>Time Series Decomposition</strong></summary>
+<p>We applied classical decomposition methods to dissect the time series into its constituent components. This process helps in understanding the underlying trend, capturing the recurring seasonal patterns, and isolating irregular movements in the data.</p>
+<img src="Graphs/SDdaily.png" alt="Daily Seasonal Decomposition">
+<p><em>Daily Decomposition:</em> Highlights the intraday patterns and energy usage cycles within a single day.</p>
+<img src="Graphs/SDweekly.png" alt="Weekly Seasonal Decomposition">
+<p><em>Weekly Decomposition:</em> Reflects the fluctuations in energy demand that recur on a weekly basis, potentially influenced by the working week and weekend behaviors.</p>
+<img src="Graphs/SD3monthly.png" alt="Three-Monthly Seasonal Decomposition">
+<p><em>Three-Monthly Decomposition:</em> Captures the broader seasonal trends, particularly the impact of climatic changes across different seasons in Victoria, Australia.</p>
+<img src="Graphs/SDmonthly.png" alt="Monthly Seasonal Decomposition">
+<p><em>Monthly Decomposition:</em> Provides insights into the monthly variations which may include factors such as billing cycles, holidays, and monthly economic activity.</p>
+</details>
 
-<div>
-  <h2>Project Overview</h2>
-  <p>The objective of this project is to dissect and understand the time series data representing the half-hourly energy demand in Victoria, Australia. Our aim is to extract meaningful patterns and statistics that will enable us to forecast future demand with high accuracy.</p>
-  
-  <h2>Key Findings</h2>
-  
-  <h3>1. Time Series Decomposition</h3>
-  <p>We applied classical decomposition methods to separate the time series into its constituent components:</p>
-  <ul>
-    <li><strong>Trend</strong>: The trend component exhibited a cyclical behavior, hinting at underlying influences such as economic activities or seasonal weather variations that affect energy usage over time.</li>
-    <li><strong>Seasonality</strong>: We observed pronounced seasonality within a three-month period, which aligns with the typical climatic seasons in Australia, suggesting a strong seasonal influence on energy consumption patterns.</li>
-    <li><strong>Residuals</strong>: The residuals, which capture the irregular or random variations in the data after the trend and seasonal components have been accounted for, revealed additional complexity that may include outliers or non-systematic fluctuations.</li>
-  </ul>
+<details>
+<summary><strong>Augmented Dickey-Fuller (ADF) Test</strong></summary>
+<p>The ADF test was employed to test for stationarity in the time series data, which is a crucial assumption for many time series forecasting models. A stationary time series is one whose properties do not depend on the time at which the series is observed, thus no long-term trends or seasonal patterns. Stationarity is important because it implies that the time series is predictable and can be modeled.</p>
+<img src="Graphs/timeSeries.png" alt="Time Series Plot">
+<p>The ADF test results confirmed the stationarity of the time series, allowing us to proceed with the assumption that the data's mean and variance are constant over time.</p>
+</details>
 
-  <h3>2. Augmented Dickey-Fuller (ADF) Test</h3>
-  <p>The ADF test was employed to ascertain the stationarity of the time series:</p>
-  <ul>
-    <li>The test returned a very low p-value, indicating strong evidence against the null hypothesis of a unit root, thus confirming the <strong>stationarity</strong> of the series. This implies that the data is suitable for modeling without the need for differencing to stabilize the mean.</li>
-  </ul>
+<details>
+<summary><strong>Fourier Analysis</strong></summary>
+<p>Fourier analysis transforms the time series data into the frequency domain, allowing us to observe the data in terms of its frequency components. This method is particularly useful for identifying hidden periodicities in the data, which may not be evident in the time domain.</p>
+<img src="Graphs/FourierAnalysis.png" alt="Fourier Analysis">
+<p>Peaks in the Fourier analysis indicate the presence of strong periodic components at corresponding frequencies. Identifying these frequencies is critical for modeling seasonal behavior in time series forecasting.</p>
+</details>
 
-  <h3>3. Fourier Analysis</h3>
-  <p>Fourier analysis was utilized to transform the time series into the frequency domain, revealing the power spectrum of the data:</p>
-  <ul>
-    <li>The analysis uncovered a range of frequencies with significant amplitudes, pointing to the existence of multiple underlying seasonal cycles in the data. This complexity provides a nuanced understanding of the temporal dynamics at play in energy demand.</li>
-  </ul>
+<details>
+<summary><strong>Rolling Mean and Standard Deviation</strong></summary>
+<p>Visual inspection of rolling statistics provides a simple yet powerful method for identifying stationarity visually. A stationary time series will have a rolling mean and a rolling standard deviation that remain constant over time.</p>
+<img src="Graphs/RollingMeanAndSD.png" alt="Rolling Mean and Standard Deviation">
+<p>The rolling plots did not exhibit any trends, which aligns with the ADF test results, suggesting that the time series does not have a unit root and is stationary.</p>
+</details>
 
-  <h3>4. Visual Inspection</h3>
-  <p>Direct visual examination of the data was conducted to validate the analytical findings:</p>
-  <ul>
-    <li>Reviewing the raw time series alongside the rolling mean and standard deviation, we found no evidence of a long-term trend, reinforcing the stationarity indicated by the ADF test.</li>
-    <li>The decomposition plots, particularly for the three-monthly seasonality, corroborated the seasonal patterns that were consistent with the known energy demand fluctuations in Victoria.</li>
-  </ul>
-
-  <h2>Conclusion</h2>
-  <p>Through a multi-faceted analysis—encompassing decomposition, statistical testing, and frequency domain analysis—we established that the time series is stationary and features significant seasonality. These insights inform our subsequent model selection and forecasting efforts, ensuring that the chosen models can aptly capture and predict the identified patterns.</p>
-  
-  <h2>Next Steps</h2>
-  <p>Building on these foundational insights, we will proceed to develop and fine-tune forecasting models that integrate the seasonal components. The goal is to predict future energy demand with enhanced precision, taking into account the distinct seasonal influences that characterize the energy usage in Victoria, Australia.</p>
-</div>
+<details>
+<summary><strong>Energy Demand Time Series</strong></summary>
+<p>The raw time series plot gives an overall depiction of the energy demand over time. This plot is the starting point for any time series analysis, providing a high-level view of the data's behavior, including any obvious trends, seasonality, and outliers.</p>
+<img src="Graphs/EnergyDemandTS.png" alt="Energy Demand Time Series">
+</details>
