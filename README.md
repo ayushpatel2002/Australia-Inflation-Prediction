@@ -37,3 +37,33 @@
 <p>The raw time series plot gives an overall depiction of the energy demand over time. This plot is the starting point for any time series analysis, providing a high-level view of the data's behavior, including any obvious trends, seasonality, and outliers.</p>
 <img src="Graphs/EnergyDemandTS.png" alt="Energy Demand Time Series">
 </details>
+
+<h2>Model Development</h2>
+  <p>We began by implementing a SARIMA model based on the identified seasonality and stationarity within the data. The parameters were initially set based on standard practices and our understanding of the data's temporal structure.</p>
+  
+  <h2>Model Diagnostics</h2>
+  <p>The diagnostic plots provided insights into the performance of the initial SARIMA model, indicating that further tuning of the model parameters was necessary.</p>
+  <details>
+    <summary><strong>Initial Diagnostic Plots</strong></summary>
+    <img src="Graphs/InitialDiagnostics.png" alt="Initial Diagnostic Plots">
+    <p>The initial diagnostics showed potential for improvement, particularly in terms of the residuals' distribution and autocorrelation.</p>
+  </details>
+  
+  <h2>Model Tuning and Improvement</h2>
+  <p>Based on the diagnostic plots, we plan to fine-tune the SARIMA model parameters to better capture the underlying patterns in the energy demand data.</p>
+  <details>
+    <summary><strong>Current Forecast and Diagnostic Plots</strong></summary>
+    <img src="Graphs/ForecastPlot.png" alt="SARIMA Forecast Plot">
+    <img src="Graphs/Diagnostics.png" alt="SARIMA Model Diagnostics">
+    <p>The forecast plot displays the model's predictions against the actual data, with the diagnostics highlighting areas for improvement.</p>
+  </details>
+
+  <h2>Next Steps for Model Refinement</h2>
+  <p>We will systematically adjust the model's parameters, re-evaluate its performance, and iterate on the process. Our goal is to minimize residuals' autocorrelation and achieve a better fit, reflected in lower AIC and BIC scores. Cross-validation will be utilized to ensure the model's robustness against unseen data.</p>
+
+  <h2>Conclusion and Future Work</h2>
+  <p>Once the SARIMA model is fine-tuned, we will proceed with long-term forecasting. We will also establish a pipeline for continuous model evaluation and retraining to account for new data and changing patterns over time.</p>
+  
+  <h2>Contact</h2>
+  <p>For queries or contributions to the project, please reach out to us. We welcome collaboration to enhance the project's accuracy and efficacy.</p>
+</div>
